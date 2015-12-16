@@ -51,6 +51,14 @@ group :development do
 	  gem 'database_cleaner'
     # add rspec for assertion usage
     gem 'rspec-expectations'
-end
+    gem 'capybara'
+    gem 'cucumber'
+    gem 'rspec'
+    gem 'selenium-webdriver'
+    gem 'poltergeist'
+    gem 'pry'
+    gem 'capybara-webkit'
+    gem 'capybara-screenshot'
+  end
 end
 
