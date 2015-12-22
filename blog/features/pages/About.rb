@@ -1,5 +1,5 @@
-class Home < SitePrism::Page
-  set_url "http://genomebiology.biomedcentral.com.staging.oscarjournals.springer.com/"
+class About < SitePrism::Page
+  set_url "http://genomebiology.biomedcentral.com.staging.oscarjournals.springer.com/about"
 
   element :footer_legal, "p.footer-dynamic-legal"
 
