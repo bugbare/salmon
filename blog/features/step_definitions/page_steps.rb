@@ -23,6 +23,7 @@ end
 
 And(/^I should see publication navigation bar$/) do
 	expect(@app.home.main).to have_articleListTabs
+	expect(@app.home.main.articleListTabs.map {|tab| tab.text}).to eq ["RECENT MOST ACCESSED"]
 end
 
 And(/^I should see a list of the most recent articles$/) do
