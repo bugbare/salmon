@@ -1,22 +1,15 @@
-
-
-#Given(/^the articulate site is available$/) do
-#  pending # express the regexp above with the code you wish you had
-#end
-
-#When(/^I visit the home page$/) do
-#  pending # express the regexp above with the code you wish you had
-#end
-
-Given(/^I have loaded some articles onto the articulate site$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
 Given(/^I visit the home page$/) do
-  pending # express the regexp above with the code you wish you had
-end
+  #@home = Home.new
+  #@home.load
+  @app = App.new
+  @app.home.load
+  @app.home.header
+  @app.home.navbar
+  @app.home.footer
+  
+  puts "actual page title: " + @app.home.title
+  puts "actual url: " + @app.home.current_url
 
-Given(/^the confirmation message to destroy the item appears$/) do
-  pending # express the regexp above with the code you wish you had
-end
+  #puts "actual number of tabs is: " + @home.navbar.tabs.length.to_s
 
+end

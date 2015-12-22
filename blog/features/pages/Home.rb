@@ -1,20 +1,13 @@
+#Dir["../features/sections/*.*"].each {|file| require file }
+
 class Home < SitePrism::Page
-  set_url "/index.htm"
-  set_url_matcher /google.com\/?/
+  set_url "http://genomebiology.biomedcentral.com.staging.oscarjournals.springer.com/"
 
-  element :search_field, "input[name='q']"
-  element :search_button, "button[name='btnK']"
-  elements :footer_links, "#footer a"
-  section :menu, MenuSection, "#gbx3"
-end
+  element :footer_legal, "p.footer-dynamic-legal"
 
-class SearchResults < SitePrism::Page
-  set_url_matcher /google.com\/results\?.*/
-
-  section :menu, MenuSection, "#gbx3"
-  sections :search_results, SearchResultSection, "#results li"
-
-  def search_result_links
-    search_results.map {|sr| sr.title['href']}
-  end
+  section :header, ::HeaderSection, "header.Header"
+  section :navbar, ::NavBarSection, "main"
+  section :main, ::MainSection, "div#Test-ImgSrc"
+  section :sidebar, ::SideBarSection, "div.Main_sidebar"
+  section :footer, ::FooterSection, "footer.Footer"
 end
