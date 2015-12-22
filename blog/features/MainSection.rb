@@ -1,6 +1,6 @@
 class MainSection < SitePrism::Section
 	
-	element :articleListHeading, "div.CmsItem.CmsCollection.Tabs.h2"
+	element :articleListHeading, "div.CmsItem.CmsCollection.Tabs"
 	element :articleEditorsBox, "div.CmsItem.CmsArticle.EditorsBox"
 	element :articleRss, "a#recent-articles-feed"
 	element :viewAllArticles, "p.ViewAll"
