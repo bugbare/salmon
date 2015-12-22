@@ -18,6 +18,7 @@ end
 # JOURNAL CONTENT USE CASE EXPECTATIONS
 
 Then(/^I should see the main content section$/) do
+	expect(@app.home).to have_main
 	expect(@app.home.main).to have_articleListHeading
 end
 
@@ -40,6 +41,12 @@ end
 
 And (/^I should see a link to see all articles$/) do
 	expect(@app.home.main).to have_viewAllArticles
+end
+
+# SIDEBAR USE CASE EXPECTATIONS
+
+Then(/^I should see the sidebar section$/) do
+	expect(@app.home).to have_sidebar
 end
 
 # FOOTER USE CASE EXPECTATIONS

@@ -20,6 +20,10 @@ Scenario: The journal home page has a main content section
 	And I should see a link to the rss feed
 	And I should see a link to see all articles
 
+Scenario: The journal home page has a side bar section
+	Given I visit the home page
+	Then I should see the sidebar section
+
 Scenario: The journal home page has a footer
 	Given I visit the home page
 	Then I should see the footer
