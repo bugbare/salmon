@@ -18,28 +18,15 @@ end
 # JOURNAL CONTENT USE CASE EXPECTATIONS
 
 Then(/^I should see the about main content section$/) do
-	expect(@app.about).to have_main
+	expect(@app.about).to have_aboutMain
 end
 
-And(/^I should see about publication navigation bar$/) do
-	expect(@app.about.main).to have_articleListTabs
-	expect(@app.about.main.articleListTabs.map {|tab| tab.text}).to eq ["RECENT MOST ACCESSED"]
-end
+And(/^I should see the about aims and scope section$/) do
+	expect(@app.about).to have_aboutHeading
+	expect(@app.about).to have_contentSections
+	@app.about.contentSections.map {|content| puts content.text.to_s}
 
-And(/^I should see the about list of the most recent articles$/) do
-	expect(@app.about.main).to have_articleList
-end
-
-And(/^I should see an about aims and scope section$/) do
-	expect(@app.about.main).to have_aimsAndScope
-end
-
-And(/^I should see an about link to the rss feed$/) do
-	expect(@app.about.main).to have_articleRss
-end
-
-And (/^I should see an about link to see all articles$/) do
-	expect(@app.about.main).to have_viewAllArticles
+	expect(@app.about.contentSections.map {|content| content = content.text.to_s}).to start_with(/Open access All articles published by Genome Biology/)
 end
 
 # SIDEBAR USE CASE EXPECTATIONS

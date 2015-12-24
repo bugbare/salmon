@@ -14,7 +14,7 @@ Scenario: The journal about page has a navigation bar
 Scenario: The journal about page has a main content section
 	Given I visit the about page
 	Then I should see the about main content section
-	And I should see an about aims and scope section
+	And I should see the about aims and scope section
 
 Scenario: The journal about page has a side bar section
 	Given I visit the about page

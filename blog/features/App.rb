@@ -11,4 +11,8 @@ class App
 	def articles
 		Articles.new
 	end
+
+	def journalpage
+		JournalPage.new
+	end
 end
