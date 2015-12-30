@@ -21,6 +21,7 @@ Scenario: The journal articles page has a main content section
 Scenario: The journal articles page has a side bar section
 	Given I visit the articles page
 	Then I should see the articles sidebar section
+	And I should see the articles submit manuscript button
 
 Scenario: The journal articles page has a footer
 	Given I visit the articles page

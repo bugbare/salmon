@@ -4,6 +4,7 @@ class About < SitePrism::Page
   element :aboutMain, "div#Test-ImgSrc"
   element :aboutHeading, "div#aimsAndScope"
   elements :contentSections, "div.CmsItem.CmsArticle"
+  elements :aboutSidebar, "nav.Main_sidebar"
   element :footer_legal, "p.footer-dynamic-legal"
 
   section :navbar, ::NavBarSection, "main"

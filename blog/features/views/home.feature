@@ -5,11 +5,11 @@ Feature: A web app that stores simple documents
 
 Scenario: The journal home page has a header
 	Given I visit the home page
-	Then I should see the header
+	Then I should see the home header
 
 Scenario: The journal home page has a navigation bar
 	Given I visit the home page
-	Then I should see the navigation tabs
+	Then I should see the home navigation tabs
 	And I should see the journal title
 
 Scenario: The journal home page has a main content section
@@ -23,9 +23,10 @@ Scenario: The journal home page has a main content section
 
 Scenario: The journal home page has a side bar section
 	Given I visit the home page
-	Then I should see the sidebar section
+	Then I should see the home sidebar section
+	And I should see the home submit manuscript button
 
 Scenario: The journal home page has a footer
 	Given I visit the home page
-	Then I should see the footer
+	Then I should see the home footer
 

@@ -3,7 +3,8 @@ class Articles < SitePrism::Page
 
   element :articlesMain, "div#Test-ImgSrc"
   element :searchField, "div.Search_field"
-  element :resultsBar, "div.Box"
+  element :resultsBar, :xpath, "//div[@id='search-container']"
   elements :articlesResults, "ol.ResultsList"
 
+  section :navbar, ::NavBarSection, "main"
 end
