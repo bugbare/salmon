@@ -1,8 +1,8 @@
 # HEADER USE CASE EXPECTATIONS
 
 Then(/^I should see the about header$/) do
-	expect(@app.about.header).to have_masthead
-	expect(@app.about.header).to have_sitehead
+	expect(@app.journalpage.header).to have_masthead
+	expect(@app.journalpage.header).to have_sitehead
 end
 
 # NAVIGATION USE CASE EXPECTATIONS
@@ -10,7 +10,7 @@ end
 Then(/^I should see the about navigation tabs$/) do
 	expect(@app.about.navbar).to have_identityPlate
 	expect(@app.about.navbar).to have_identityNav
-	expect(@app.about.navbar).to have_background
+	expect(@app.about.navbar).to have_journalTitle
 	expect(@app.about.navbar).to have_tabs
 	expect(@app.about.navbar.tabs.map {|tab| tab.text}).to eq ["HOME ABOUT ARTICLES"]
 end
@@ -32,12 +32,12 @@ end
 # SIDEBAR USE CASE EXPECTATIONS
 
 Then(/^I should see the about sidebar section$/) do
-	expect(@app.about).to have_sidebar
+	expect(@app.journalpage).to have_sidebar
 end
 
 # FOOTER USE CASE EXPECTATIONS
 
 Then(/^I should see the about footer$/) do
-	expect(@app.about.footer).to have_footercontent
-	expect(@app.about.footer).to have_footerbranding
+	expect(@app.journalpage.footer).to have_footercontent
+	expect(@app.journalpage.footer).to have_footerbranding
 end

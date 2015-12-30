@@ -14,7 +14,9 @@ Scenario: The journal articles page has a navigation bar
 Scenario: The journal articles page has a main content section
 	Given I visit the articles page
 	Then I should see the articles main content section
-	And I should see an articles aims and scope section
+	And I should see an articles search field
+	And I should see the results bar
+	And I should see the results list
 
 Scenario: The journal articles page has a side bar section
 	Given I visit the articles page

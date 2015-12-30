@@ -9,6 +9,9 @@ end
 
 Then(/^I should see the articles main content section$/) do
 	expect(@app.articles).to have_articlesMain
+	expect(@app.articles).to have_searchField
+	expect(@app.articles).to have_resultsBar
+	expect(@app.articles).to have_articlesResults
 end
 
 # SIDEBAR USE CASE EXPECTATIONS
