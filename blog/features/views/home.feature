@@ -10,6 +10,7 @@ Scenario: The journal home page has a header
 Scenario: The journal home page has a navigation bar
 	Given I visit the home page
 	Then I should see the navigation tabs
+	And I should see the journal title
 
 Scenario: The journal home page has a main content section
 	Given I visit the home page

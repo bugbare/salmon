@@ -55,6 +55,7 @@ group :development do
     gem 'cucumber'
     gem 'rspec'
     gem 'selenium-webdriver'
+    gem 'phantomjs'
     gem 'poltergeist'
     gem 'pry'
     gem 'capybara-webkit'

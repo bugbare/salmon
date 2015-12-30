@@ -9,6 +9,8 @@ require 'site_prism'
 require 'yaml'
 require 'pry'
 
+Phantomjs.path
+
 if ENV['IN_BROWSER']
   # On demand: non-headless tests via Selenium/WebDriver
   # To run the scenarios in browser (default: Firefox), use the following command line:
@@ -24,6 +26,7 @@ else
   Capybara.register_driver :poltergeist do |app|
     Capybara::Poltergeist::Driver.new(
       app,
+      :phantomjs => Phantomjs.path,
       window_size: [1280, 1024]#,
       #debug:       true
     )

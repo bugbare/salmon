@@ -1,6 +1,7 @@
 Given(/^I visit the home page$/) do
   #Create an instance of the App class and instantiate the home page definition from that class
   @app = App.new
+  @app.journalpage.load
   @app.home.load
   
   
