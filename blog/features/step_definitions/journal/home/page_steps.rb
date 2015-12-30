@@ -1,13 +1,13 @@
 # HEADER USE CASE EXPECTATIONS
 
-Then(/^I should see the header$/) do
+Then(/^I should see the home header$/) do
 	expect(@app.journalpage.header).to have_masthead
 	expect(@app.journalpage.header).to have_sitehead
 end
 
 # NAVIGATION USE CASE EXPECTATIONS
 
-Then(/^I should see the navigation tabs$/) do
+Then(/^I should see the home navigation tabs$/) do
 	expect(@app.home.navbar).to have_identityPlate
 	expect(@app.home.navbar).to have_identityNav
 	expect(@app.home.navbar).to have_tabs
@@ -48,13 +48,17 @@ end
 
 # SIDEBAR USE CASE EXPECTATIONS
 
-Then(/^I should see the sidebar section$/) do
+Then(/^I should see the home sidebar section$/) do
 	expect(@app.journalpage).to have_sidebar
+end
+
+And(/^I should see the home submit manuscript button$/) do
+	expect(@app.journalpage.sidebar).to have_submitManuscript
 end
 
 # FOOTER USE CASE EXPECTATIONS
 
-Then(/^I should see the footer$/) do
+Then(/^I should see the home footer$/) do
 	expect(@app.journalpage.footer).to have_footercontent
 	expect(@app.journalpage.footer).to have_footerbranding
 end

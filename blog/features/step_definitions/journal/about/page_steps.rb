@@ -35,6 +35,10 @@ Then(/^I should see the about sidebar section$/) do
 	expect(@app.journalpage).to have_sidebar
 end
 
+And(/^I should see the about submit manuscript button$/) do
+	expect(@app.journalpage.sidebar).to have_submitManuscript
+end
+
 # FOOTER USE CASE EXPECTATIONS
 
 Then(/^I should see the about footer$/) do

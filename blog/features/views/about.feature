@@ -19,6 +19,7 @@ Scenario: The journal about page has a main content section
 Scenario: The journal about page has a side bar section
 	Given I visit the about page
 	Then I should see the about sidebar section
+	And I should see the about submit manuscript button
 
 Scenario: The journal about page has a footer
 	Given I visit the about page
