@@ -24,3 +24,14 @@ Examples:
 	|home|
 	|about|
 	|articles|
+
+Scenario Outline: All journal pages have a nav bar section
+	Given I visit the <name> page
+	Then I should see the <name> navigation tabs
+	And I should see the journal title on the <name> page
+
+Examples:
+	|name|
+	|home|
+	|about|
+	|articles|

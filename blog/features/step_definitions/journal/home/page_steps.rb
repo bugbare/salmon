@@ -1,3 +1,4 @@
+=begin
 # HEADER USE CASE EXPECTATIONS
 
 Then(/^I should see the home header$/) do
@@ -17,15 +18,15 @@ end
 And(/^I should see the journal title$/) do
 	expect(@app.home.navbar).to have_journalTitle
 end
-
+=end
 # JOURNAL CONTENT USE CASE EXPECTATIONS
 
-Then(/^I should see the main content section$/) do
-	expect(@app.home).to have_main
-	expect(@app.home).to have_articleListHeading
+Then(/^I should see the home main content section$/) do
+	expect(@app.home).to have_homeMain
+	#expect(@app.home).to have_articleListHeading
 end
 
-And(/^I should see publication navigation bar$/) do
+And(/^I should see the home publication navigation bar$/) do
 	expect(@app.home).to have_articleListTabs
 	expect(@app.home.articleListTabs.map {|tab| tab.text}).to eq ["RECENT MOST ACCESSED"]
 end
@@ -45,7 +46,7 @@ end
 And (/^I should see a link to see all articles$/) do
 	expect(@app.home).to have_viewAllArticles
 end
-
+=begin
 # SIDEBAR USE CASE EXPECTATIONS
 
 Then(/^I should see the home sidebar section$/) do
@@ -62,3 +63,4 @@ Then(/^I should see the home footer$/) do
 	expect(@app.journalpage.footer).to have_footercontent
 	expect(@app.journalpage.footer).to have_footerbranding
 end
+=end
