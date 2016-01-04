@@ -19,7 +19,7 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
   		#puts "The current page being tested is: " + pageLocator
 
   	when 'home'
-      @app.journalpage.load(pageName: pageLocator.to_s)
+      @app.journalpage.load
       puts "URL: " + @app.journalpage.current_url
   		@app.home.load
 		  #puts "The current page being tested is: " + pageLocator
@@ -27,13 +27,27 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
     when 'about/editorial-board'
       @app.journalpage.load(pageName: pageLocator.to_s)
       puts "URL: " + @app.journalpage.current_url
-      #@app.editorial.load
+      @app.editorial.load
+      #puts "The current page being tested is: " + pageLocator
+
+    when 'about/contact'
+      @app.journalpage.load(pageName: pageLocator.to_s)
+      puts "URL: " + @app.journalpage.current_url
+      @app.contact.load
       #puts "The current page being tested is: " + pageLocator
 
     when 'articles/10.1186/s13059-014-0489-9'
       @app.journalpage.load(pageName: pageLocator.to_s)
       puts "URL: " + @app.journalpage.current_url
-      #@app.article.load
+      @app.article.load
+      #puts "The current page being tested is: " + pageLocator
+
+    when 'submission-guidelines'
+      @app.journalpage.load(pageName: pageLocator.to_s)
+      puts "URL: " + @app.journalpage.current_url
+      @app.submissionGuidelines.load
+      #puts "The current page being tested is: " + pageLocator
+
   end  
   
   # LINES BELOW CAN HELP WITH INITIAL DEBUGGING FOR THE TEST NAVIGATION

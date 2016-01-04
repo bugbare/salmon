@@ -13,8 +13,10 @@ Examples:
 	|home|
 	|about|
 	|articles|
+	|about/contact|
 	|about/editorial-board|
 	|articles/10.1186/s13059-014-0489-9|
+	|submission-guidelines|
 
 Scenario Outline: All journal pages have a side bar section
 	Given I visit the <name> page
@@ -26,8 +28,10 @@ Examples:
 	|home|
 	|about|
 	|articles|
+	|about/contact|
 	|about/editorial-board|
-	#|articles/10.1186/s13059-014-0489-9| Submit Manuscript element needs to tested separately for articles
+	|submission-guidelines|
+	# Submit Manuscript element needs to tested separately for articles
 
 Scenario Outline: All journal pages have a nav bar section
 	Given I visit the <name> page
@@ -39,5 +43,7 @@ Examples:
 	|home|
 	|about|
 	|articles|
+	|about/contact|
 	|about/editorial-board|
+	|submission-guidelines|
 	|articles/10.1186/s13059-014-0489-9|
