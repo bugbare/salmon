@@ -8,8 +8,8 @@ class Home < SitePrism::Page
   element :viewAllArticles, "p.ViewAll"
   element :aimsAndScope, "#aimsAndScope"
 
-  elements :articleListTabs, "ul.ListTab.ListTab--small"
-  elements :articleList, "ol.ResultsList.ResultsList--beta"
+  elements :articleListTabs, "ul.ListTab"
+  elements :articleList, "ol.ResultsList.ResultsList"
   element :footer_legal, "p.footer-dynamic-legal"
 
   section :navbar, ::NavBarSection, "header#identity-container"

@@ -13,6 +13,8 @@ Examples:
 	|home|
 	|about|
 	|articles|
+	|about/editorial-board|
+	|articles/10.1186/s13059-014-0489-9|
 
 Scenario Outline: All journal pages have a side bar section
 	Given I visit the <name> page
@@ -24,6 +26,8 @@ Examples:
 	|home|
 	|about|
 	|articles|
+	|about/editorial-board|
+	|articles/10.1186/s13059-014-0489-9|
 
 Scenario Outline: All journal pages have a nav bar section
 	Given I visit the <name> page
@@ -35,3 +39,5 @@ Examples:
 	|home|
 	|about|
 	|articles|
+	|about/editorial-board|
+	|articles/10.1186/s13059-014-0489-9|

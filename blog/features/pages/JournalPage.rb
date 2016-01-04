@@ -1,5 +1,5 @@
 class JournalPage < SitePrism::Page
-  set_url "http://genomebiology.biomedcentral.com.staging.oscarjournals.springer.com/"
+  set_url "http://genomebiology.biomedcentral.com.staging.oscarjournals.springer.com/{pageName}"
 
   element :footer_legal, "p.footer-dynamic-legal"
 
