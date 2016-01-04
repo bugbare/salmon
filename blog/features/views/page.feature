@@ -27,7 +27,7 @@ Examples:
 	|about|
 	|articles|
 	|about/editorial-board|
-	|articles/10.1186/s13059-014-0489-9|
+	#|articles/10.1186/s13059-014-0489-9| Submit Manuscript element needs to tested separately for articles
 
 Scenario Outline: All journal pages have a nav bar section
 	Given I visit the <name> page
