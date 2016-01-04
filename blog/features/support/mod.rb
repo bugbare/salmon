@@ -27,7 +27,8 @@ else
     Capybara::Poltergeist::Driver.new(
       app,
       :phantomjs => Phantomjs.path,
-      window_size: [1280, 1024]#,
+      window_size: [1280, 1024],
+      js_errors: false
       #debug:       true
     )
   end

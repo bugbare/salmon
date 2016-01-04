@@ -32,6 +32,7 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
 
     when 'articles/10.1186/s13059-014-0489-9'
       @app.journalpage.load(pageName: pageLocator.to_s)
+      puts "URL: " + @app.journalpage.current_url
       #@app.article.load
   end  
   
