@@ -1,118 +1,118 @@
-# JOURNAL CONTENT USE CASE EXPECTATIONS
-Then(/^I should see the article main content section$/) do
-  pending # express the regexp above with the code you wish you had
+# JOURNAL ARTICLE CONTENT USE CASE EXPECTATIONS
+Then(/^I should see the articles\/(.*) main content section$/) do |doi|
+  expect(@app.article).to have_articleMain
 end
 
-Then(/^I should see the article main title$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) main title$/) do |doi| 
+  expect(@app.article).to have_articleTitle
 end
 
-Then(/^I should see the article author names$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) author names$/) do |doi|
+  expect(@app.article).to have_authorNames
 end
 
-Then(/^I should see the article information$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) information$/) do |doi|
+  expect(@app.article).to have_articleInfo
 end
 
-Then(/^I should see the article publication history$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) publication history$/) do |doi|
+  expect(@app.article).to have_articleHistory
 end
 
-Then(/^I should see the article abstract section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) abstract section$/) do |doi|
+  expect(@app.article).to have_abstractSection
 end
 
-Then(/^I should see the article background section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) background section$/) do |doi|
+  expect(@app.article).to have_backgroundSection
 end
 
-Then(/^I should see the article results section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) results section$/) do |doi|
+  expect(@app.article).to have_resultsSection
 end
 
-Then(/^I should see the article results figure (\d+)$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) results figure 1$/) do |doi|
+  expect(@app.article).to have_resultsFig1
 end
 
-Then(/^I should see the article results table (\d+)$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) results table 1$/) do |doi|
+  expect(@app.article).to have_resultsTable1
 end
 
-Then(/^I should see the article results maths equation$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) results maths equation$/) do |doi|
+  expect(@app.article).to have_resultsMathEq1
 end
 
-Then(/^I should see the article discussion section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) discussion section$/) do |doi|
+  expect(@app.article).to have_discussionSection
 end
 
-Then(/^I should see the article conclusions section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) conclusions section$/) do |doi|
+  expect(@app.article).to have_conclusionSection
 end
 
-Then(/^I should see the article materials and methods section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) materials and methods section$/) do |doi|
+  expect(@app.article).to have_matsAndMethsSection
 end
 
-Then(/^I should see the article abbreviations section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) abbreviations section$/) do |doi|
+  expect(@app.article).to have_abbreviationSection
 end
 
-Then(/^I should see the article declarations section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) declarations section$/) do |doi|
+  expect(@app.article).to have_declarationsSection
 end
 
-Then(/^I should see the article declarations additional file links$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) declarations additional file links$/) do |doi|
+  expect(@app.article).to have_additionalFiles
 end
 
-Then(/^I should see the article references section$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) references section$/) do |doi|
+  expect(@app.article).to have_referencesSection
 end
 
-Then(/^I should see the article reference links for a reference$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) reference links for a reference$/) do |doi|
+  expect(@app.article).to have_references
 end
 
-Then(/^I should see the article copyright section$/) do
-  pending # express the regexp above with the code you wish you had
-end
-
-Then(/^I should see the article download pdf button$/) do
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see the articles\/(.*) copyright section$/) do |doi|
+  expect(@app.article).to have_copyrightSection
 end
 
 # JOURNAL ARTICLE SIDEBAR CONTENT VERIFICATION STEPS
 
-Then(/^I should see the article export citations button$/) do
+Then(/^I should see the articles\/(.*) download pdf button$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the article table of contents$/) do
+Then(/^I should see the articles\/(.*) export citations button$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the article metrics section$/) do
+Then(/^I should see the articles\/(.*) table of contents$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the article social tools section$/) do
+Then(/^I should see the articles\/(.*) metrics section$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the article updates section$/) do
+Then(/^I should see the articles\/(.*) social tools section$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the article collections section$/) do
+Then(/^I should see the articles\/(.*) updates section$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the article other actions section$/) do
+Then(/^I should see the articles\/(.*) collections section$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end
 
-Then(/^I should see the article follow me section$/) do
+Then(/^I should see the articles\/(.*) other actions section$/) do |doi|
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^I should see the articles\/(.*) follow me section$/) do |doi|
   pending # express the regexp above with the code you wish you had
 end

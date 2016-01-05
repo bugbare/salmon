@@ -36,7 +36,7 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
       @app.contact.load
       #puts "The current page being tested is: " + pageLocator
 
-    when 'articles/10.1186/s13059-014-0489-9'
+    when /^articles\/(\d+)\./
       @app.journalpage.load(pageName: pageLocator.to_s)
       puts "URL: " + @app.journalpage.current_url
       @app.article.load
@@ -48,7 +48,7 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
       @app.submissionGuidelines.load
       #puts "The current page being tested is: " + pageLocator
 
-  end  
+  end
   
   # LINES BELOW CAN HELP WITH INITIAL DEBUGGING FOR THE TEST NAVIGATION
   #puts "actual page title: " + @app.journalpage.title
