@@ -21,7 +21,7 @@ end
 
 # SIDEBAR USE CASE EXPECTATIONS
 
-Then(/^I should see the (.*) sidebar section$/) do |pageName|
+Then(/^I should see the ((?!article\b).*) sidebar section$/) do |pageName|
 	expect(@app.journalpage).to have_sidebar
 end
 

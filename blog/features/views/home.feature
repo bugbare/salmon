@@ -20,7 +20,7 @@ Scenario: The journal home page has a main content section
 	And I should see a list of the most recent articles
 	And I should see an aims and scope section
 	And I should see a link to the rss feed
-	And I should see a link to see all articles
+	And I should see a link to view all articles
 
 @ignore
 Scenario: The journal home page has a side bar section

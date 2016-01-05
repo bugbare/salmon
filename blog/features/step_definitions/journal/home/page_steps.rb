@@ -21,6 +21,6 @@ And(/^I should see a link to the rss feed$/) do
 	expect(@app.home).to have_articleRss
 end
 
-And (/^I should see a link to see all articles$/) do
+And (/^I should see a link to view all articles$/) do
 	expect(@app.home).to have_viewAllArticles
 end

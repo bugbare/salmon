@@ -21,6 +21,7 @@ Scenario: The journal articles page has a main content section
 	And I should see the sort by filter
 	And I should see the pagination buttons
 	And I should see the results list
+	
   
 @ignore
 Scenario: The journal articles page has a side bar section
