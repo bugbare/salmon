@@ -1,5 +1,9 @@
 class Contact < SitePrism::Page
-  set_url "http://genomebiology.biomedcentral.com.staging.oscarjournals.springer.com/about/editorial-board"
+  set_url "http://genomebiology.biomedcentral.com.staging.oscarjournals.springer.com/about/contact"
 
-  element :editorialMain, "div#Test-ImgSrc"
+  element :contactMain, "main"
+  
+  element :editorialEmail, "div#editorial-email.email"
+  element :supportEmail, "div#support-email.email"
+
 end

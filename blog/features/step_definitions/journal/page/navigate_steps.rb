@@ -24,14 +24,14 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
   		@app.home.load
 		  #puts "The current page being tested is: " + pageLocator
 
-    when 'about/editorial-board'
-      @app.journalpage.load(pageName: pageLocator.to_s)
+    when 'editorial-board'
+      @app.journalpage.load(pageName: "about\/" + pageLocator.to_s)
       puts "URL: " + @app.journalpage.current_url
       @app.editorial.load
       #puts "The current page being tested is: " + pageLocator
 
-    when 'about/contact'
-      @app.journalpage.load(pageName: pageLocator.to_s)
+    when 'contact'
+      @app.journalpage.load(pageName: "about\/" + pageLocator.to_s)
       puts "URL: " + @app.journalpage.current_url
       @app.contact.load
       #puts "The current page being tested is: " + pageLocator

@@ -39,5 +39,6 @@ Scenario: The journal article page has a side bar section
 	And I should see the articles/10.1186/s13059-014-0489-9 collections section
 	And I should see the articles/10.1186/s13059-014-0489-9 other actions section
 	And I should see the articles/10.1186/s13059-014-0489-9 follow me section
+	And I should see the articles/10.1186/s13059-014-0489-9 ad section
 
 

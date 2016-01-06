@@ -13,8 +13,8 @@ Examples:
 	|home|
 	|about|
 	|articles|
-	|about/contact|
-	|about/editorial-board|
+	|contact|
+	|editorial-board|
 	|articles/10.1186/s13059-014-0489-9|
 	|submission-guidelines|
 
@@ -28,8 +28,8 @@ Examples:
 	|home|
 	|about|
 	|articles|
-	|about/contact|
-	|about/editorial-board|
+	|contact|
+	|editorial-board|
 	|submission-guidelines|
 	# Submit Manuscript element needs to tested separately for articles
 
@@ -43,7 +43,7 @@ Examples:
 	|home|
 	|about|
 	|articles|
-	|about/contact|
-	|about/editorial-board|
+	|contact|
+	|editorial-board|
 	|submission-guidelines|
 	|articles/10.1186/s13059-014-0489-9|

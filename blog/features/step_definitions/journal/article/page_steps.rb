@@ -56,7 +56,7 @@ Then(/^I should see the articles\/(.*) materials and methods section$/) do |doi|
 end
 
 Then(/^I should see the articles\/(.*) abbreviations section$/) do |doi|
-  expect(@app.article).to have_abbreviationSection
+  expect(@app.article).to have_abbreviationsSection
 end
 
 Then(/^I should see the articles\/(.*) declarations section$/) do |doi|
@@ -82,37 +82,41 @@ end
 # JOURNAL ARTICLE SIDEBAR CONTENT VERIFICATION STEPS
 
 Then(/^I should see the articles\/(.*) download pdf button$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_downloadPdf
 end
 
 Then(/^I should see the articles\/(.*) export citations button$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_exportCitation
 end
 
 Then(/^I should see the articles\/(.*) table of contents$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_tableOfContents
 end
 
 Then(/^I should see the articles\/(.*) metrics section$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_altmetric
 end
 
 Then(/^I should see the articles\/(.*) social tools section$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_socialTools
 end
 
 Then(/^I should see the articles\/(.*) updates section$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_updates
 end
 
 Then(/^I should see the articles\/(.*) collections section$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_collections
 end
 
 Then(/^I should see the articles\/(.*) other actions section$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_otherActions
 end
 
 Then(/^I should see the articles\/(.*) follow me section$/) do |doi|
-  pending # express the regexp above with the code you wish you had
+  expect(@app.article).to have_followMe
+end
+
+Then(/^I should see the articles\/(.*) ad section$/) do |doi|
+  expect(@app.article).to have_fullTextAd
 end
