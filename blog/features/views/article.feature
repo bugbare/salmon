@@ -30,6 +30,7 @@ Examples:
 	|articleDoi|
 	|10.1186/s13059-014-0489-9|
 	|10.1186/s13059-015-0851-6|
+	|10.1186/s13059-015-0843-6|
 
   
 Scenario Outline: The journal article page has a side bar section
@@ -50,3 +51,4 @@ Examples:
 	|articleDoi|
 	|10.1186/s13059-014-0489-9|
 	|10.1186/s13059-015-0851-6|
+	|10.1186/s13059-015-0843-6|
