@@ -7,13 +7,20 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
 
   case pageLocator
   	when 'about'
-      @app.journalpage.load(pageName: pageLocator.to_s)
+      @app.journalpage.load(pageLocator: pageLocator)
       puts "URL: " + @app.journalpage.current_url
   		@app.about.load
   		#puts "The current page being tested is: " + pageLocator
 
+    when /^articles\/(\d+)/
+      _, doi1, doi2 = pageLocator.split('/')
+      #@app.journalpage.load(doi1: doi1, doi2: doi2)
+      @app.article.load(doi1: doi1, doi2: doi2)
+      puts "\nURL: " + @app.article.current_url
+      #puts "The current page being tested is: " + pageLocator
+
   	when 'articles'
-      @app.journalpage.load(pageName: pageLocator.to_s)
+      @app.journalpage.load(pageLocator: pageLocator)
       puts "URL: " + @app.journalpage.current_url
   		@app.articles.load
   		#puts "The current page being tested is: " + pageLocator
@@ -25,25 +32,19 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
 		  #puts "The current page being tested is: " + pageLocator
 
     when 'editorial-board'
-      @app.journalpage.load(pageName: "about\/" + pageLocator.to_s)
+      @app.journalpage.load(pageLocator: "about\/" + pageLocator)
       puts "URL: " + @app.journalpage.current_url
       @app.editorial.load
       #puts "The current page being tested is: " + pageLocator
 
     when 'contact'
-      @app.journalpage.load(pageName: "about\/" + pageLocator.to_s)
+      @app.journalpage.load(pageLocator: "about\/" + pageLocator)
       puts "URL: " + @app.journalpage.current_url
       @app.contact.load
       #puts "The current page being tested is: " + pageLocator
 
-    when /^articles\/(\d+)\./
-      @app.journalpage.load(pageName: pageLocator.to_s)
-      puts "URL: " + @app.journalpage.current_url
-      @app.article.load
-      #puts "The current page being tested is: " + pageLocator
-
     when 'submission-guidelines'
-      @app.journalpage.load(pageName: pageLocator.to_s)
+      @app.journalpage.load(pageLocator: pageLocator)
       puts "URL: " + @app.journalpage.current_url
       @app.submissionGuidelines.load
       #puts "The current page being tested is: " + pageLocator
@@ -58,4 +59,11 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
   #puts "actual text of pubnav tabs are: " + (@app.journalpage.main.articleListTabs.map {|tab| tab.text}).to_s
   
 
+end
+
+Given(/^I visit an article page that has (.*)$/) do |doi|
+  @app = App.new
+  doi1, doi2 = doi.split('/')
+  @app.article.load(doi1: doi1, doi2: doi2)
+  puts "\nURL: " + @app.article.current_url
 end
