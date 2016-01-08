@@ -1,7 +1,7 @@
-Feature: A web app that stores journal content
-  In order to use the application
-  The users
-  Should be able to visit our web site
+Feature: Article Content
+  In order to provide a user friendly experience
+  Researchers
+  Should be able to navigate and find information easily on any given journal article
   
 Scenario Outline: The journal article page has a main content section
 	Given I visit an article page that has <doi>

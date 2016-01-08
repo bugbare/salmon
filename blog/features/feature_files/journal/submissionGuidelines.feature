@@ -1,7 +1,7 @@
-Feature: A web app that stores simple documents
-  In order to use the application
-  The users
-  Should be able to visit our web site
+Feature: Manuscript Submission
+  In order to submit a manuscript successfully
+  Authors
+  Should be able to read any given journal's submission guidlines
 
 Scenario: The journal submission-guidelines page has a main content section
 	Given I visit the submission-guidelines page

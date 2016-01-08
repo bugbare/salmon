@@ -1,7 +1,7 @@
-Feature: A web app that stores journal documents
-  In order to see journal content
-  The users
-  Should be able to visit any given journal home page
+Feature: Journal Page Containers
+  In order to ensure that the user experience is consistent
+  Users
+  Should be able to see these same journal common sections on every single page for any given journal
 
 Scenario Outline: All Journal pages have a header and footer
 	Given I visit the <name> page

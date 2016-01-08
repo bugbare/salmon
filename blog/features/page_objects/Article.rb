@@ -12,10 +12,10 @@ class Article < SitePrism::Page
   element :abstractSection, "section#Abs1.Abstract"
 
 # BACKGROUND SECTION
-  element :backgroundSection, "section#Sec1"
+  element :backgroundSection, :xpath, "//section[contains(.,'background')]"
 
 # RESULTS SECTION
-  element :resultsSection, "section#Sec2"
+  element :resultsSection, :xpath, "//section[contains(.,'results')]"
   element :resultsFig1, "figure#Fig1.Figure"
   element :resultsTable1, "figure#Tab1.FigureTable"
   element :resultsMathEq1, "div#Equa.Equation.EquationMathjax"

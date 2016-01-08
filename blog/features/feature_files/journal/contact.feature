@@ -1,7 +1,7 @@
-Feature: A web app that stores simple documents
-  In order to use the application
-  The users
-  Should be able to visit our web site
+Feature: Contacts
+  In order to contact useful journal staff
+  Users
+  Should be able to view a page with the relevant staff contact details
 
 Scenario: The journal contact page has a main content section
 	Given I visit the contact page
