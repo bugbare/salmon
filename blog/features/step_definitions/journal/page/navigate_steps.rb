@@ -8,45 +8,51 @@ Given(/^I visit the (.*) page$/) do |pageLocator|
   case pageLocator
   	when 'about'
       @app.journalpage.load(pageLocator: pageLocator)
-      puts "URL: " + @app.journalpage.current_url
-  		@app.about.load
+      puts "Title: " + @app.journalpage.title
+      expect(@app.journalpage.title).to start_with("Genome Biology | About")
+  		#@app.about.load
   		#puts "The current page being tested is: " + pageLocator
 
     when /^articles\/(\d+)/
       _, doi1, doi2 = pageLocator.split('/')
-      #@app.journalpage.load(doi1: doi1, doi2: doi2)
       @app.article.load(doi1: doi1, doi2: doi2)
-      puts "\nURL: " + @app.article.current_url
+      puts "Title: " + @app.article.title
+      expect(@app.article.title).to start_with("MSEA: detection and quantification of mutation hotspots")
       #puts "The current page being tested is: " + pageLocator
 
   	when 'articles'
       @app.journalpage.load(pageLocator: pageLocator)
-      puts "URL: " + @app.journalpage.current_url
-  		@app.articles.load
+      puts "Title: " + @app.journalpage.title
+      expect(@app.journalpage.title).to start_with("Genome Biology | Article List")
+  		#@app.articles.load
   		#puts "The current page being tested is: " + pageLocator
 
   	when 'home'
       @app.journalpage.load
-      puts "URL: " + @app.journalpage.current_url
-  		@app.home.load
+      puts "Title: " + @app.journalpage.title
+      expect(@app.journalpage.title).to start_with("Genome Biology | Home page")
+  		#@app.home.load
 		  #puts "The current page being tested is: " + pageLocator
 
     when 'editorial-board'
       @app.journalpage.load(pageLocator: "about\/" + pageLocator)
-      puts "URL: " + @app.journalpage.current_url
-      @app.editorial.load
+      puts "Title: " + @app.journalpage.title
+      expect(@app.journalpage.title).to start_with("Genome Biology | Editorial Board")
+      #@app.editorial.load
       #puts "The current page being tested is: " + pageLocator
 
     when 'contact'
       @app.journalpage.load(pageLocator: "about\/" + pageLocator)
-      puts "URL: " + @app.journalpage.current_url
-      @app.contact.load
+      puts "Title: " + @app.journalpage.title
+      expect(@app.journalpage.title).to start_with("Genome Biology | Contact")
+      #@app.contact.load
       #puts "The current page being tested is: " + pageLocator
 
     when 'submission-guidelines'
       @app.journalpage.load(pageLocator: pageLocator)
-      puts "URL: " + @app.journalpage.current_url
-      @app.submissionGuidelines.load
+      puts "Title: " + @app.journalpage.title
+      expect(@app.journalpage.title).to start_with("Genome Biology | Submission Guidelines")
+      #@app.submissionGuidelines.load
       #puts "The current page being tested is: " + pageLocator
 
   end
@@ -65,5 +71,6 @@ Given(/^I visit an article page that has (.*)$/) do |doi|
   @app = App.new
   doi1, doi2 = doi.split('/')
   @app.article.load(doi1: doi1, doi2: doi2)
-  puts "\nURL: " + @app.article.current_url
+  expect(@app.article).to be_displayed
+  puts "Title: " + @app.article.title
 end
