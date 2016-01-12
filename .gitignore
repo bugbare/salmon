@@ -1,5 +1,6 @@
-# Object file
-*.o
+# HTML file
+*.html
 
 # Ada Library Information
-*.ali
+*.ali≈
+
