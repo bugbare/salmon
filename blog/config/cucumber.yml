@@ -1,7 +1,20 @@
 <%
 rerun = File.file?('rerun.txt') ? IO.read('rerun.txt') : ""
-rerun_opts = rerun.to_s.strip.empty? ? "--format #{ENV['CUCUMBER_FORMAT'] || 'progress'} features" : "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} #{rerun}"
+rerun_opts = rerun.to_s.strip.empty? ? "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} features" : "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} #{rerun}"
 std_opts = "--format #{ENV['CUCUMBER_FORMAT'] || 'pretty'} --strict --tags ~@wip"
+%>
+
+<%
+Dir.chdir("reports")
+unless Dir.exist?(Time.now.strftime('%Y-%m-%d'))
+	Dir.mkdir(Time.now.strftime('%Y-%m-%d'))
+end
+
+puts "\n>>> TEST REPORT is filed in the following path:\n" + Dir.pwd + "\/" + Time.now.strftime('%Y-%m-%d')+ "\n\n"
+
+reportfile = "reports\/" + Time.now.strftime('%Y-%m-%d') + "\/" + Time.now.strftime('%Y-%m-%d_%H-%M-%S') + "-test-report.html"
+
+Dir.chdir("..")
 %>
 
 <% common = "--tags ~@wip --tags ~@ignore --strict" %>
@@ -10,4 +23,4 @@ default: --profile html_report <%= common%> features
 wip: --tags @wip:3 --wip features
 rerun: <%= rerun_opts %> --format rerun --out rerun.txt --strict --tags ~@wip
 
-html_report: --format pretty --format html --out=features_report.html
+html_report: --format pretty --format html --out <%= reportfile%>

@@ -10,6 +10,7 @@ require 'yaml'
 require 'pry'
 
 Phantomjs.path
+Capybara::Screenshot.prune_strategy = :keep_last_run
 
 if ENV['IN_BROWSER']
   # On demand: non-headless tests via Selenium/WebDriver
@@ -42,14 +43,3 @@ Capybara.configure do |config|
   config.save_and_open_page_path = File.dirname(__FILE__) + '/../../tmp/'
   #config.default_driver = :webkit
 end
-
-Capybara::Webkit.configure do |config|
-  # Enable debug mode. Prints a log of everything the driver is doing.
-  config.debug = ENV['SMOKE_DEBUG'] || false
-
-  # We are robots we don't like images
-  config.skip_image_loading
-
-  # We do not want to hit analitycs etc.
-  config.block_unknown_urls
-  end

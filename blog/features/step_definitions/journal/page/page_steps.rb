@@ -1,8 +1,10 @@
 # HEADER USE CASE EXPECTATIONS
 
 Then(/^I should see the (.*) header$/) do |pageName|
-	expect(@app.journalpage.header).to have_masthead
-	expect(@app.journalpage.header).to have_sitehead
+	expect(@app.journalpage.header).to have_headerInner
+	expect(@app.journalpage.header).to have_headerLogo
+	expect(@app.journalpage.header).to have_loginLink
+	expect(@app.journalpage.header).to have_search
 end
 
 # NAVIGATION USE CASE EXPECTATIONS
