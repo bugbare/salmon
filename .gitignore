@@ -4,3 +4,5 @@
 # Ada Library Information
 *.ali≈
 
+# Cucumber File
+rerun.txt
